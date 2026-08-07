@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="460" viewBox="0 0 1000 460"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     role="img" aria-label="Sasi Chandan &#8212; verdant">
+  <style>
+    text { font-family: -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
+    .mono { font-family: 'SF Mono','Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+
+    .in    { opacity: 0; animation: rise .6s cubic-bezier(.22,1,.36,1) forwards; }
+    .fade  { opacity: 0; animation: fade .8s ease-out forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(7px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+    @keyframes fade { to { opacity: 1; } }
+
+    .cursor { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0; } }
+
+    .pulse { transform-origin: center; transform-box: fill-box;
+             animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .9; } 50% { opacity: .35; } }
+
+    .sheen { animation: sweep 9s ease-in-out infinite; }
+    @keyframes sweep { 0%, 55% { transform: translateX(-1100px); }
+                       85%, 100% { transform: translateX(1100px); } }
+
+    .frame-in { opacity: 0; transform-origin: center; transform-box: fill-box;
+                animation: frame .9s cubic-bezier(.22,1,.36,1) .5s forwards; }
+    @keyframes frame { from { opacity: 0; transform: scale(.975) translateY(6px); }
+                       to   { opacity: 1; transform: scale(1) translateY(0); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .in, .fade, .frame-in { animation: none; opacity: 1; }
+      .sheen { animation: none; opacity: 0; }
+    }
+    </style>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#060A08"/>
+      <stop offset="1" stop-color="#030504"/>
+    </linearGradient>
+    <radialGradient id="glowTL" cx="0.12" cy="0.05" r="0.75">
+      <stop offset="0" stop-color="#2FD07B" stop-opacity="0.085"/>
+      <stop offset="1" stop-color="#2FD07B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBR" cx="0.92" cy="1" r="0.8">
+      <stop offset="0" stop-color="#4A5BDC" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#4A5BDC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sheenG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.035"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="portraitWash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FA3FF" stop-opacity="0.10"/>
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#2FD07B" stop-opacity="0.12"/>
+    </linearGradient>
+    <radialGradient id="placeholderBg" cx="0.5" cy="0.38" r="0.9">
+      <stop offset="0" stop-color="#1A1118"/>
+      <stop offset="1" stop-color="#0C0A10"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <clipPath id="window"><rect width="1000" height="460" rx="22"/></clipPath>
+  </defs>
+
+  <!-- ===== window ===== -->
+  <g clip-path="url(#window)">
+    <rect width="1000" height="460" fill="url(#bg)"/>
+    <rect width="1000" height="460" fill="url(#glowTL)"/>
+    <rect width="1000" height="460" fill="url(#glowBR)"/>
+    <rect class="sheen" x="-260" y="-40" width="520" height="540"
+          fill="url(#sheenG)" transform="skewX(-18)"/>
+
+    <!-- title bar -->
+    <circle cx="34" cy="26.0" r="5.5" fill="#FF5F57" opacity="0.85"/>
+    <circle cx="56" cy="26.0" r="5.5" fill="#FEBC2E" opacity="0.85"/>
+    <circle cx="78" cy="26.0" r="5.5" fill="#28C840" opacity="0.85"/>
+    <text class="mono" x="500.0" y="30.0" text-anchor="middle"
+          font-size="12" letter-spacing="1.5" fill="#4C5A53">verdant — v1.0.0</text>
+    <line x1="0" y1="52" x2="1000" y2="52"
+          stroke="#FFFFFF" stroke-opacity="0.06"/>
+
+    <text class="mono in" style="animation-delay:0.35s" x="52" y="108" font-size="12.5" fill="#87998F"><tspan fill="#2FD07B">&#9656;</tspan>  verdant 1.0.0 — cold boot</text>
+<text class="mono in" style="animation-delay:0.85s" x="52" y="132" font-size="12.5" fill="#87998F"><tspan fill="#2FD07B">&#9656;</tspan>  mounting environment ......... ok</text>
+<text class="mono in" style="animation-delay:1.35s" x="52" y="156" font-size="12.5" fill="#87998F"><tspan fill="#2FD07B">&#9656;</tspan>  loading models ............... ok</text>
+<text class="mono in" style="animation-delay:1.85s" x="52" y="180" font-size="12.5" fill="#87998F"><tspan fill="#2FD07B">&#9656;</tspan>  opening session .............. ok</text>
+<g class="in" style="animation-delay:2.50s"><text class="mono" x="52" y="210" font-size="12.5" fill="#4C5A53">sasi@verdant <tspan fill="#2FD07B">~</tspan> $</text><rect class="cursor" x="180" y="199" width="7.5" height="14" rx="1.5" fill="#2FD07B"/></g>
+    
+    <text class="in" style="animation-delay:2.95s" x="52" y="286"
+          font-size="42" font-weight="700" letter-spacing="0.5"
+          fill="#E9F3EC">Sasi Chandan</text>
+    <text class="in" style="animation-delay:3.12s" x="52" y="316"
+          font-size="16" font-weight="500" letter-spacing="2.5"
+          fill="#87998F">STUDENT</text>
+    <text class="in mono" style="animation-delay:3.22s" x="52" y="340"
+          font-size="12.5" font-style="italic"
+          fill="#4C5A53">// teaching machines to guess well, then checking their work</text>
+
+    <g class="in" style="animation-delay:3.30s">
+      <rect x="52" y="366" width="382" height="30" rx="15"
+            fill="#0D1410" stroke="#FFFFFF" stroke-opacity="0.09"/>
+      <circle class="pulse" cx="69" cy="381" r="3.6" fill="#7BE38F"/>
+      <circle cx="69" cy="381" r="7.5" fill="#7BE38F" opacity="0.14"/>
+      <text class="mono" x="83" y="385.5" font-size="11"
+            letter-spacing="1" fill="#87998F">ONLINE  —  student · building · learning in public</text>
+    </g>
+    
+    <g class="frame-in">
+      <rect x="698" y="61" width="248" height="328" rx="26"
+            fill="#0D1410" stroke="#FFFFFF" stroke-opacity="0.08"/>
+      <ellipse cx="822.0" cy="225.0" rx="165.0" ry="186.0"
+               fill="#2FD07B" opacity="0.055" filter="url(#soft)"/>
+      <clipPath id="portraitClip">
+        <rect x="712" y="75" width="220" height="300" rx="18"/>
+      </clipPath>
+      
+        <rect x="712" y="75" width="220" height="300" rx="18" fill="url(#placeholderBg)"/>
+        <circle cx="822.0" cy="213.0" r="64" fill="none"
+                stroke="#2FD07B" stroke-opacity="0.25" stroke-width="1"/>
+        <circle cx="822.0" cy="213.0" r="78" fill="none"
+                stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+        <text x="822.0" y="235.0" text-anchor="middle"
+              font-size="58" font-weight="600" fill="#2FD07B"
+              fill-opacity="0.85">V</text>
+        <text class="mono" x="822.0" y="349" text-anchor="middle"
+              font-size="9.5" letter-spacing="1.5" fill="#4C5A53">AWAITING PORTRAIT</text>
+      <rect x="712" y="75" width="220" height="300" rx="18" fill="none"
+            stroke="#2FD07B" stroke-opacity="0.35" stroke-width="1.2"/>
+      <rect x="712.5" y="75.5" width="219" height="299" rx="17.5"
+            fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="1"/>
+      <circle class="pulse" cx="916" cy="91" r="4" fill="#7BE38F"
+              stroke="#060A08" stroke-width="2.5"/>
+      <text class="mono" x="822.0" y="409" text-anchor="middle"
+            font-size="11" letter-spacing="2"
+            fill="#4C5A53">identity<tspan fill="#2FD07B"> : </tspan>verdant</text>
+    </g>
+  </g>
+
+  <!-- outer hairline -->
+  <rect x="0.5" y="0.5" width="999" height="459" rx="21.5"
+        fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+</svg>

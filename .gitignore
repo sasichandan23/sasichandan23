@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+
+# local editor / tool settings, not part of the profile
+.claude/
+
+# NOTE: output/*.svg must stay tracked — GitHub serves the README
+# images straight out of the repo. Never ignore that folder.

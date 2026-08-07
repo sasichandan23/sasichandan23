@@ -1,0 +1,244 @@
+# ============================================================
+#  verdant — a second operating system, same engine.
+#  Black and green. Nothing shared with the crimson build
+#  except the code that renders it.
+#
+#    python scripts/generate.py
+# ============================================================
+
+identity:
+  name: "Sasi Chandan"          # DRAFT — confirm the real spelling
+  handle: "sasi"
+  github_username: "sasichandan23"
+  role: "Student"
+  tagline: "teaching machines to guess well, then checking their work"
+  status: "ONLINE"
+  status_note: "student · building · learning in public"
+
+portrait:
+  # Drop any image in — same pipeline, same frame, different face.
+  source_dir: "assets/portrait"
+  label: "verdant"
+  display_width: 220
+  display_height: 300
+  quality: 85
+
+os:
+  title: "verdant"
+  version: "1.0.0"
+
+theme:
+  # Black and green — grown, not glowing. Deep near-black with a
+  # green undertone, one living accent, no neon and no Matrix rain.
+  bg:        "#060A08"
+  bg_deep:   "#030504"
+  glass:     "#0D1410"
+  line:      "#FFFFFF"
+  text:      "#E9F3EC"
+  text_dim:  "#87998F"
+  text_faint: "#4C5A53"
+  accent:    "#2FD07B"
+  accent_soft: "#6BE8A6"
+  ok:        "#7BE38F"
+  # the package channels stay inside the palette
+  channel_stable: "#7BE38F"
+  channel_learning: "#C6E86B"
+  channel_experimental: "#4FD8C4"
+
+boot:
+  lines:
+    - "verdant 1.0.0 — cold boot"
+    - "mounting environment ......... ok"
+    - "loading models ............... ok"
+    - "opening session .............. ok"
+
+labels:
+  # A third distinct set of chrome — not the crimson build's, not atlas's.
+  hero:
+    prompt: "{handle}@verdant"
+    symbol: "$"
+  explorer:
+    title: "file_index"
+    right: "~/src"
+    root: "~/src"
+    no_desc: "no description set on this repository"
+    status_active: "live"
+    status_dormant: "resting"
+    status_archived: "sealed"
+    footer: "{count} projects indexed · one surfaces each day · {os}"
+    footer_live: "{repos} repositories · ★ {stars} stars · {followers} followers · one surfaces each day"
+  packages:
+    title: "dependencies"
+    right: "deps v{version}"
+    command: "deps --installed"
+    footer: "{count} dependencies resolved · no conflicts · channels: stable / learning / experimental"
+  timeline:
+    title: "commit_history"
+    right: "log --reverse"
+  manual:
+    title: "profile.md"
+    right: "cat(1)"
+  system:
+    title: "environment"
+    right: "printenv"
+  secret:
+    title: "hidden_layer"
+    right: "cat .env"
+    intro: "you went looking. good instinct."
+    note: "a different line loads tomorrow"
+  contact:
+    command: "connect --open"
+    email_label: "mail"
+    eof: "EOF · {os}"
+
+projects:
+  # Curated, because none of the repositories carry a description yet.
+  # Flip data.auto_projects to true once they do, and this list stops
+  # being used entirely.
+  - name: insurance-management-system
+    type: java
+    since: 2026
+    status: live
+    desc: >-
+      Policies, claims and customers in one place — a full Java
+      backend built to survive real paperwork.
+    stack: [Java, MySQL]
+  - name: fit-365
+    type: web app
+    since: 2026
+    status: live
+    desc: >-
+      A fitness companion for people who quit in February —
+      tracking, habits, and gentle accountability.
+    stack: [JavaScript, CSS]
+  - name: loan_prediction
+    type: machine learning
+    since: 2025
+    status: resting
+    desc: >-
+      Predicting loan approval from applicant data, and learning
+      how much a model's confidence is worth.
+    stack: [Python, scikit-learn]
+  - name: movie_recomendation_system
+    type: machine learning
+    since: 2025
+    status: resting
+    desc: >-
+      Recommending films by similarity — the project where the
+      maths finally started to feel intuitive.
+    stack: [Python, pandas]
+  - name: chatbot
+    type: conversational ai
+    since: 2025
+    status: resting
+    desc: >-
+      Three attempts at the same idea, each one better than the
+      last — the app, the API, and the interface.
+    stack: [HTML, JavaScript]
+
+skills:
+  # Detected from real code in the public repositories.
+  - group: languages
+    items:
+      - { name: javascript, channel: stable }      # detected · 294 KB
+      - { name: java,       channel: stable }      # detected · 116 KB
+      - { name: css,        channel: stable }      # detected ·  22 KB
+      - { name: html,       channel: stable }      # detected ·  18 KB
+      - { name: python,     channel: stable }      # detected ·  10 KB
+      - { name: sql,        channel: learning }
+  - group: frameworks
+    items:
+      - { name: node.js,    channel: stable }
+      - { name: scikit-learn, channel: learning }
+      - { name: pandas,     channel: learning }
+      - { name: numpy,      channel: learning }
+  - group: tools
+    items:
+      - { name: git,        channel: stable }
+      - { name: docker,     channel: stable }      # detected · Dockerfile
+      - { name: mysql,      channel: stable }
+      - { name: vs code,    channel: stable }
+
+timeline:
+  # DRAFT — built from what the account actually shows. Add anything
+  # earlier than September 2025; GitHub cannot see it.
+  - year: 2025
+    title: first conversations
+    detail: three chatbots in a row — the app, the api, the interface
+  - year: 2025
+    title: the model era
+    detail: loan prediction and movie recommendations, learning to trust data
+  - year: 2026
+    title: shipping products
+    detail: fit-365 — a fitness app people could actually open
+  - year: now
+    title: full stack
+    detail: insurance management in java, and this operating system
+
+contact:
+  email: sasichandan.23@gmail.com
+  links:
+    - { label: github, url: "https://github.com/sasichandan23" }
+    # - { label: linkedin, url: "" }   # add if wanted
+
+hidden:
+  manual:
+    summary: "cat profile.md"
+    sections:
+      - heading: NAME
+        lines:
+          - "sasi — student, model wrangler, backend builder"
+      - heading: SYNOPSIS
+        lines:
+          - "sasi [--train] [--test] [--ship] <idea>"
+      - heading: DESCRIPTION
+        lines:
+          - "Started with chatbots, moved to models, ended up building"
+          - "the whole system around them. Prefers a project that runs"
+          - "over a project that only demos."
+      - heading: PHILOSOPHY
+        lines:
+          - "1.  A model is a guess with better manners."
+          - "2.  Build the boring part first — it is the part that breaks."
+          - "3.  Learn in public, ship in private, repeat."
+
+  system:
+    # DRAFT — replace with the real setup.
+    summary: "printenv"
+    specs:
+      - { key: machine, value: "windows 11" }
+      - { key: editor,  value: "vs code" }
+      - { key: shell,   value: "powershell" }
+      - { key: theme,   value: "black on green" }
+      - { key: fuel,    value: "chai" }
+      - { key: uptime,  value: "building since 2025" }
+
+  secret:
+    summary: "cat .env"
+    fortunes:
+      - "My first chatbot only knew three sentences. I was still proud of it."
+      - "Every model I have trained was wrong. Some were useful."
+      - "The recommendation system recommended itself once. I let it."
+      - "Overfitting is just a model caring too much about the past."
+      - "I debug by explaining the problem out loud to nobody in particular."
+      - "The boring part of the project is the part that ships."
+      - "You found the hidden layer. Most people stop at the surface."
+
+readme:
+  source_note: |
+       ┌──────────────────────────────────────┐
+       │  verdant · generated, never written  │
+       └──────────────────────────────────────┘
+
+       one yaml file describes me. a python script renders it.
+       nothing on this page was placed by hand.
+
+       fork it if you want one.
+
+data:
+  github_api: true
+  refresh_hours: 6
+  active_within_days: 90
+  # OFF until the repositories have descriptions worth showing.
+  # Live stats (repos, stars, followers) still come through.
+  auto_projects: false

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="356" viewBox="0 0 1000 356"
+     xmlns="http://www.w3.org/2000/svg" role="img" aria-label="dependencies">
+  <style>
+    text { font-family: -apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; }
+    .mono { font-family: 'SF Mono','Cascadia Code',Consolas,'Liberation Mono',Menlo,monospace; }
+
+    .in    { opacity: 0; animation: rise .6s cubic-bezier(.22,1,.36,1) forwards; }
+    .fade  { opacity: 0; animation: fade .8s ease-out forwards; }
+    @keyframes rise { from { opacity: 0; transform: translateY(7px); }
+                      to   { opacity: 1; transform: translateY(0); } }
+    @keyframes fade { to { opacity: 1; } }
+
+    .cursor { animation: blink 1.1s steps(1) infinite; }
+    @keyframes blink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0; } }
+
+    .pulse { transform-origin: center; transform-box: fill-box;
+             animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .9; } 50% { opacity: .35; } }
+
+    .sheen { animation: sweep 9s ease-in-out infinite; }
+    @keyframes sweep { 0%, 55% { transform: translateX(-1100px); }
+                       85%, 100% { transform: translateX(1100px); } }
+
+    .frame-in { opacity: 0; transform-origin: center; transform-box: fill-box;
+                animation: frame .9s cubic-bezier(.22,1,.36,1) .5s forwards; }
+    @keyframes frame { from { opacity: 0; transform: scale(.975) translateY(6px); }
+                       to   { opacity: 1; transform: scale(1) translateY(0); } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .in, .fade, .frame-in { animation: none; opacity: 1; }
+      .sheen { animation: none; opacity: 0; }
+    }
+    </style>
+  <defs>
+    <linearGradient id="bgpkg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#060A08"/>
+      <stop offset="1" stop-color="#030504"/>
+    </linearGradient>
+    <radialGradient id="glpkg" cx="0.5" cy="0" r="0.9">
+      <stop offset="0" stop-color="#2FD07B" stop-opacity="0.045"/>
+      <stop offset="1" stop-color="#2FD07B" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="cppkg"><rect width="1000" height="356" rx="22"/></clipPath>
+  </defs>
+  <g clip-path="url(#cppkg)">
+    <rect width="1000" height="356" fill="url(#bgpkg)"/>
+    <rect width="1000" height="356" fill="url(#glpkg)"/>
+    <text class="mono" x="30" y="27.5" font-size="12" letter-spacing="1.5"
+          fill="#87998F"><tspan fill="#2FD07B">&#9656;</tspan>  dependencies</text>
+    <text class="mono" x="970" y="27.5" text-anchor="end"
+          font-size="11.5" fill="#4C5A53">deps v1.0.0</text>
+    <line x1="0" y1="46" x2="1000" y2="46" stroke="#FFFFFF" stroke-opacity="0.06"/>
+    <text class="in mono" style="animation-delay:.2s" x="44" y="86" font-size="12.5" fill="#87998F"><tspan fill="#2FD07B">$</tspan> deps --installed</text><text class="in mono" style="animation-delay:0.35s" x="44" y="124" font-size="11" letter-spacing="2" fill="#4C5A53">LANGUAGES/</text><text class="in mono" style="animation-delay:0.45s" x="44" y="152" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  javascript  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.52s" x="44" y="178" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  java  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.59s" x="44" y="204" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  css  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.66s" x="44" y="230" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  html  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.73s" x="44" y="256" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  python  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.80s" x="44" y="282" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  sql  <tspan font-size="10.5" fill="#C6E86B">@learning</tspan></text><text class="in mono" style="animation-delay:0.47s" x="372" y="124" font-size="11" letter-spacing="2" fill="#4C5A53">FRAMEWORKS/</text><text class="in mono" style="animation-delay:0.57s" x="372" y="152" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  node.js  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.64s" x="372" y="178" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  scikit-learn  <tspan font-size="10.5" fill="#C6E86B">@learning</tspan></text><text class="in mono" style="animation-delay:0.71s" x="372" y="204" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  pandas  <tspan font-size="10.5" fill="#C6E86B">@learning</tspan></text><text class="in mono" style="animation-delay:0.78s" x="372" y="230" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  numpy  <tspan font-size="10.5" fill="#C6E86B">@learning</tspan></text><text class="in mono" style="animation-delay:0.59s" x="700" y="124" font-size="11" letter-spacing="2" fill="#4C5A53">TOOLS/</text><text class="in mono" style="animation-delay:0.69s" x="700" y="152" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  git  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.76s" x="700" y="178" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  docker  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.83s" x="700" y="204" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  mysql  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text><text class="in mono" style="animation-delay:0.90s" x="700" y="230" font-size="13" fill="#E9F3EC"><tspan fill="#2FD07B" fill-opacity="0.7">&#9642;</tspan>  vs code  <tspan font-size="10.5" fill="#7BE38F">@stable</tspan></text>
+    <line x1="0" y1="316" x2="1000" y2="316" stroke="#FFFFFF" stroke-opacity="0.05"/><text class="mono" x="500.0" y="340" text-anchor="middle" font-size="10" letter-spacing="1" fill="#4C5A53">14 dependencies resolved · no conflicts · channels: stable / learning / experimental</text>
+  </g>
+  <rect x="0.5" y="0.5" width="999" height="355" rx="21.5"
+        fill="none" stroke="#FFFFFF" stroke-opacity="0.10"/>
+</svg>

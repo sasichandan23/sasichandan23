@@ -1,0 +1,38 @@
+name: regenerate profile
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # keep live data fresh every 6 hours
+  # No paths filter on purpose: GitHub cannot evaluate one on a
+  # repository's first commit, which silently skips the very run that
+  # builds the profile. The commit step is a no-op when nothing changed.
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install pyyaml pillow
+
+      - run: python scripts/generate.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: regenerate profile"
+          git push
